@@ -11,11 +11,10 @@ public class SumOverArray {
 				sum += i;
 			}
 
-			return sum;
 		} catch (NullPointerException e) {
 			e.printStackTrace();
 		}
-		return 0;
+		return sum;
 		
 	}
 
