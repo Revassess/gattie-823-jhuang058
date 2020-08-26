@@ -18,15 +18,15 @@ public class ConnectionUtil {
 	private static ConnectionUtil cu;
 	
 	// add your jdbc url
-	public static final String URL = "jdbc:postgresql://postgresql-class.cks98gmxels6.us-west-1.rds.amazonaws.com:5432/revassess";
+	public static final String URL = "jdbc:postgresql://javafs200803.caqwwrp3jshh.us-east-1.rds.amazonaws.com:5432/db";
 	// add your jdbc username
-	public static final String USERNAME = "associate";
+	public static final String USERNAME = "postgres";
 	// add your jdbc password
 	public static final String PASSWORD = "password";
 	// name of the created stored procedure in tier 3
 	public static final String TIER_3_PROCEDURE_NAME = "";
 	// name of the created sequence in tier 3
-	public static final String TIER_3_SEQUENCE_NAME = "";
+	public static final String TIER_3_SEQUENCE_NAME = "seq";
 
 	// implement this method to connect to the db and return the connection object
 	public Connection connect()throws SQLException{
