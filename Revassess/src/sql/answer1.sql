@@ -1,0 +1,1 @@
+SELECT * FROM app_users WHERE role_id = 3;
