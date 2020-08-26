@@ -2,7 +2,9 @@ package com.revature.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * 
@@ -41,10 +43,25 @@ public class ConnectionUtil {
 
 
 	//implement this method with a callable statement that calls the absolute value sql function
-	public long callAbsoluteValueFunction(long value){
-		return value;
+	public long callAbsoluteValueFunction(long value) throws SQLException{
+		
+		Connection conn = connect();
+			String sql = "ABS("+value+");";
+
+			Statement statement = conn.createStatement();
+
+			ResultSet r = statement.executeQuery(sql);
+
+			return r.getLong(0);
+
 	}
 	
+
+	private static Connection getConnection() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 	//make the class into a singleton
 	private ConnectionUtil(){
